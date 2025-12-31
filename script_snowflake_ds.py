@@ -133,14 +133,3 @@ def run_stock_job():
 if __name__ == "__main__":
     run_stock_job()
 
-"""
-Zach's original code without delay and API limit handling:
-while 'next_url' in data:
-    print('requesting next page', data['next_url'])
-    response = requests.get(data['next_url'] + f'&apiKey={POLYGON_API_KEY}')
-    data = response.json()
-    print(data)
-    for ticker in data['results']:
-        tickers.append(ticker)
-
-print(len(tickers))"""
